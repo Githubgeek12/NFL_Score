@@ -7,7 +7,6 @@ from openpyxl.utils.dataframe import dataframe_to_rows
 from pyppeteer import launch
 from bs4 import BeautifulSoup
 from pyppeteer_stealth import stealth
-import requests
 import NFL_2
 from io import StringIO
 
