@@ -7,7 +7,7 @@ from openpyxl.utils.dataframe import dataframe_to_rows
 from pyppeteer import launch
 from bs4 import BeautifulSoup
 from pyppeteer_stealth import stealth
-import NFL_2
+import NFL_detail
 from io import StringIO
 
 
@@ -95,7 +95,7 @@ async def scrape_data():
 
 
 async def get_summary(site_1, name, _date, wb):
-    await NFL_2.demo3(site_1=site_1, name=name, _date=_date, wb=wb)
+    await NFL_detail.demo3(site_1=site_1, name=name, _date=_date, wb=wb)
 
 
 if __name__ == '__main__':
