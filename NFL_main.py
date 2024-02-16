@@ -74,12 +74,14 @@ async def scrape_data():
         link = t.find_all('a')
         list_1 = []
         list_2 = []
-        x = 0+(3*idx)
+        x = 3*idx
         for index, _ in enumerate(link, start=1):
             cell_coord = 'G'+str(index+1)
+            cell_coord_1 = 'A'+str(index+1)
             link_1 = site[:-len('/games/index.html')]+_['href']
             w[cell_coord] = link_1
             dt = t.select_one('#leftcol > table:nth-child('+str(8+x)+') > tbody > tr:nth-child('+str(index)+') > td:nth-child(1) > span.hidden-xs').get_text()
+            w[cell_coord_1] = dt
             list_1.append(link_1)
             list_2.append(dt)
 
